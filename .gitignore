@@ -1,0 +1,7 @@
+PyTorch_sample/
+__pycache__/
+*.pyc
+.vscode/*
+.DS_Store
+._*
+.python-version
