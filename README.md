@@ -14,3 +14,15 @@ $ python
 >>> torch.cuda.is_available()
 True
 ```
+
+## Chech GPU on Terminal
+```
+$ watch -d -n 0.5 nvidia-smi
+```
+
+## Use GPU
+```
+data = data.to('cuda')
+target = target.to('cuda')
+model = model.to('cuda')
+```
