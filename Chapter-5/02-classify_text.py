@@ -123,8 +123,9 @@ def eval_net(net, data_loader, device='cpu'):
 
 
 if __name__ == '__main__':
-    train_data = IMDBDataset('/Users/Izumi/Programs/PyTorch-Learning/Chapter-5/data/aclImdb/')
-    test_data = IMDBDataset('/Users/Izumi/Programs/PyTorch-Learning/Chapter-5/data/aclImdb/', train=False)
+    base = pathlib.Path(__file__).parent
+    train_data = IMDBDataset(base.joinpath('./data/aclImdb/'))
+    test_data = IMDBDataset(base.joinpath('./data/aclImdb/'), train=False)
     train_loader = DataLoader(train_data, batch_size=32, shuffle=True, num_workers=2)
     test_loader = DataLoader(test_data, batch_size=32, shuffle=False, num_workers=2)
 
