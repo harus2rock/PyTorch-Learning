@@ -26,3 +26,29 @@ data = data.to('cuda')
 target = target.to('cuda')
 model = model.to('cuda')
 ```
+
+## Check the number of CPU cores in Linux
+### the number of CPU
+```
+$ cat /proc/cpuinfo | grep "physical id" | uniq
+physical id	: 0
+```
+
+### the number of processer
+```
+$ cat /proc/cpuinfo | grep "processor"
+processor	: 0
+processor	: 1
+processor	: 2
+
+   :
+
+processor	: 18
+processor	: 19
+```
+
+### the number of CPU cores
+```
+$ cat /proc/cpuinfo | grep "cpu cores" | uniq
+cpu cores	: 10
+```
